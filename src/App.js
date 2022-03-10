@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
 import "./App.css";
-import Comment from './Comment';
+import Person from "./Person";
+import Counter from "./Counter";
+const App = () => {
+    // const isNameShowing=false;
+  return (
+    <div className="App">
+        <h1>hello !</h1>
+        <br></br>
+        <Person name="Pape" last="NDIAYE" age={26}/>
+        <br></br>
+        <Counter/>
+        {/* <br></br>
+        <Person name="Moussa" last="DIOP" age={26}/>
+        <br/>
+        <Person name="Moustapha" last="FAll" age={18}/> */}
 
-
-let auth={
-    avatarURL:"https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
-    name:"makh"
+    </div>
+  )
 }
-export default class App extends Component {
-    render() {
-        return (
-            <div>
-                 <Comment author={auth} date={new Date()} />
-            </div>
-        )
-    }
-}
+export default App;
